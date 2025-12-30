@@ -28,272 +28,85 @@
     {"@context":"https://schema.org","@type":"ProfessionalService","name":"Positano Group","description":"Elite fractional CFO and strategic finance advisory","url":"https://positanogroup.com","logo":"https://positanogroup.com/logo.png","address":{"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY","addressCountry":"US"},"serviceType":["Fractional CFO","Strategic Finance","Interim CFO","FP&A","M&A Advisory"]}
     </script>
     <style>
-/* --- GLOBAL RESET & VARIABLES --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary-green:#576D54;--accent-green:#749170;--dark:#201D1D;--text-dark:#2D2D2D}
+html{scroll-behavior:smooth}
+body{font-family:'Helvetica Neue',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;color:var(--text-dark);background:#ffffff}
 
-:root {
-  --primary-green: #576D54;
-  --accent-green: #749170;
-  --dark: #201D1D;
-  --text-dark: #2D2D2D;
-}
+/* Navigation */
+nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 2px 20px rgba(0,0,0,.05);z-index:1000;transition:all .3s}
+nav.scrolled{box-shadow:0 2px 30px rgba(0,0,0,.1)}
+.nav-container{max-width:1400px;margin:0 auto;padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo img{max-height:40px;cursor:pointer}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;color:var(--dark);font-weight:500;font-size:.95rem;transition:color .3s;position:relative}
+.nav-cta{padding:.7rem 1.8rem!important;background:var(--primary-green)!important;color:#fff!important;border-radius:50px;box-shadow:0 2px 15px rgba(87,109,84,.2)}
 
-html {
-  scroll-behavior: smooth;
-}
+/* Hamburger - Restored Original Logic */
+.hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px}
+.hamburger span{width:25px;height:3px;background:var(--primary-green);transition:all .3s;border-radius:2px}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(8px,8px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
 
-body {
-  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  color: var(--text-dark);
-  background: #ffffff;
-}
+/* Hero & Sections */
+#home{min-height:100vh;display:flex;align-items:center;background:#f8f9fa;padding-top:80px}
+.hero-container{max-width:1400px;margin:0 auto;padding:4rem 2rem}
+.hero-content h1{font-size:4.5rem;font-weight:800;color:var(--dark);line-height:1.1;margin-bottom:1.5rem;letter-spacing:-2px}
+.hero-tagline{font-size:1.8rem;color:var(--primary-green);font-weight:600;margin-bottom:1.5rem}
+.cta-button{display:inline-block;padding:1.2rem 2.5rem;background:var(--primary-green);color:#fff;text-decoration:none;border-radius:50px;font-weight:600;transition:all .3s}
+section{padding:8rem 2rem;max-width:1400px;margin:0 auto}
+.section-title{font-size:3rem;font-weight:800;color:var(--dark);margin-bottom:1rem}
+.section-subtitle{font-size:1.2rem;color:#666;margin-bottom:4rem;max-width:700px}
 
-/* --- NAVIGATION & MOBILE MENU --- */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, .95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, .05);
-  z-index: 1000;
-  transition: all .3s;
-}
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:3rem}
+.service-card{background:#fff;padding:3rem;border-radius:20px;box-shadow:0 4px 30px rgba(0,0,0,.05);border:1px solid rgba(87,109,84,.1)}
 
-.nav-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1.2rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/* Why Us - The Grid Fix */
+#why-us{background:var(--primary-green);color:#fff;border-radius:30px;margin:0 auto;padding:6rem 4rem;text-align:center}
+#why-us .section-title{color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3rem;margin-top:4rem}
 
-.logo img {
-  max-height: 40px;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-  align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
-  font-size: .95rem;
-  transition: color .3s;
-}
-
-.nav-links a:hover {
-  color: var(--primary-green);
-}
-
-.nav-cta {
-  padding: .7rem 1.8rem !important;
-  background: var(--primary-green) !important;
-  color: #fff !important;
-  border-radius: 50px;
-  box-shadow: 0 2px 15px rgba(87, 109, 84, .2);
-}
-
-/* Hamburger Icon */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1001;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: var(--primary-green);
-  transition: all .3s;
-  border-radius: 2px;
-}
-
-/* Hamburger Animation */
-.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
-
-/* --- HERO SECTION --- */
-#home {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: #f8f9fa;
-  padding-top: 80px;
-}
-
-.hero-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
-
-.hero-content h1 {
-  font-size: 4.5rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  letter-spacing: -2px;
-}
-
-/* --- WHY US GRID (THE FIX) --- */
-#why-us {
-  background: var(--primary-green);
-  color: #fff;
-  border-radius: 30px;
-  margin: 2rem auto;
-  max-width: 1400px;
-  padding: 6rem 4rem;
-  text-align: center;
-}
-
-#why-us .section-title { color: #fff; }
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 across on Large Desktop */
-  gap: 2.5rem;
-  margin-top: 4rem;
-}
-
-/* Laptop/Tablet Breakpoint: Force 2x2 */
+/* Laptop Grid Logic (Ensures 2x2 layout) */
 @media (max-width: 1250px) {
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.why-card {
-  background: rgba(255, 255, 255, .1);
-  padding: 2.5rem;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, .2);
-  text-align: left;
-  transition: transform 0.3s;
+.why-card{background:rgba(255,255,255,.1);padding:2.5rem;border-radius:15px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);text-align:left}
+.why-card h3{font-size:1.5rem;margin-bottom:1rem}
+
+/* Case Studies */
+.case-studies-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2.5rem}
+.case-card{background:#fff;padding:2.5rem;border-radius:15px;box-shadow:0 4px 25px rgba(0,0,0,.06);border-left:4px solid var(--primary-green)}
+
+/* Contact */
+#contact{background:#f8f9fa;border-radius:30px;padding:6rem 4rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+
+/* Mobile Overrides - Restored Menu Functionality */
+@media (max-width:768px){
+    .hamburger{display:flex}
+    .nav-links{position:fixed;top:0;right:-100%;height:100vh;width:70%;max-width:300px;background:#fff;flex-direction:column;padding:5rem 2rem 2rem;box-shadow:-5px 0 15px rgba(0,0,0,.1);transition:right .3s;gap:0;align-items:flex-start}
+    .nav-links.active{right:0}
+    .nav-links li{width:100%;padding:1rem 0;border-bottom:1px solid #f0f0f0}
+    .nav-links a{display:block;font-size:1.1rem}
+    .hero-content h1{font-size:2.5rem}
+    .why-grid{grid-template-columns:1fr}
+    .contact-grid{grid-template-columns:1fr}
+    section{padding:4rem 1.5rem}
 }
 
-.why-card:hover { transform: translateY(-5px); }
-
-/* --- CASE STUDIES --- */
-.case-studies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
-}
-
-/* --- CONTACT & FOOTER --- */
-#contact {
-  background: #f8f9fa;
-  border-radius: 30px;
-  max-width: 1400px;
-  margin: 4rem auto;
-  padding: 6rem 4rem;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-}
-
-/* --- MOBILE RESPONSIVE (Burger Menu Fix) --- */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Hidden by default */
-    height: 100vh;
-    width: 75%;
-    max-width: 300px;
-    background: #fff;
-    flex-direction: column;
-    padding: 6rem 2rem 2rem;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-    transition: right 0.4s ease; /* Smooth slide-in */
-    gap: 1.5rem;
-    align-items: flex-start;
-  }
-
-  .nav-links.active {
-    right: 0; /* Slide in when active */
-  }
-
-  .nav-links li {
-    width: 100%;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-  }
-
-  .nav-links a {
-    font-size: 1.2rem;
-  }
-
-  .why-grid {
-    grid-template-columns: 1fr; /* Stack on mobile */
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-content h1 {
-    font-size: 2.8rem;
-  }
-
-  section {
-    padding: 4rem 1.5rem;
-  }
-}
-
-/* --- MODAL & SCROLL TOP --- */
-#scrollTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background: var(--primary-green);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0;
-  transition: 0.3s;
-  z-index: 999;
-}
-#scrollTop.visible { opacity: 1; }
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0; top: 0; width: 100%; height: 100%;
-  background: rgba(0,0,0,.7);
-  backdrop-filter: blur(5px);
-  align-items: center;
-  justify-content: center;
-}
-.modal.active { display: flex; }
-    </style>
+/* Scroll Top & Modal */
+#scrollTop{position:fixed;bottom:40px;right:40px;width:50px;height:50px;background:var(--primary-green);color:#fff;border-radius:50%;border:none;cursor:pointer;opacity:0;transition:all .3s;z-index:999}
+#scrollTop.visible{opacity:1}
+.modal{display:none;position:fixed;z-index:2000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.7);backdrop-filter:blur(5px)}
+.modal.active{display:flex;align-items:center;justify-content:center}
+.modal-content{background:#fff;padding:3rem;border-radius:20px;max-width:700px;width:90%;max-height:80vh;overflow-y:auto;position:relative}
+.modal-close{position:absolute;top:1.5rem;right:1.5rem;width:35px;height:35px;border:none;background:var(--primary-green);color:#fff;border-radius:50%;cursor:pointer}
+footer{background:var(--dark);color:#fff;text-align:center;padding:3rem 2rem}    </style>
 </head>
 <body>
 <nav id="nav">
@@ -432,6 +245,7 @@ const caseStudies={case1:{title:"Operating Partner to Dog Training Business",tag
 </body>
 
 </html>
+
 
 
 
