@@ -858,30 +858,34 @@
         </div>
     </section>
 
-    <section id="case-studies">
-        <h2 class="section-title">Real Results for Real Businesses</h2>
-        <div class="case-studies-grid">
-            <article class="case-card">
-                <p class="case-preview">Operating partner to a dog training business, streamlining operations, structuring offerings and pricing, and building the foundation for expansion.</p>
-                <button class="read-more-btn" onclick="openModal('case1')">Read More</button>
-            </article>
-            <article class="case-card">
-                <p class="case-preview">AI healthcare platform: Designed board reporting, operating model, unit economics, and scalable financial infrastructure.</p>
-                <button class="read-more-btn" onclick="openModal('case2')">Read More</button>
-            </article>
-            <article class="case-card">
-                <p class="case-preview">$15M DTC beauty brand: Drove profitable growth through smarter ad spend, channel expansion, and improved inventory planning.</p>
-                <button class="read-more-btn" onclick="openModal('case3')">Read More</button>
-            </article>
-            <article class="case-card">
-                <p class="case-preview">$10M high-growth retailer: Led restructuring and turnaround through SKU rationalization, pricing strategy, and retail expansion.</p>
-                <button class="read-more-btn" onclick="openModal('case4')">Read More</button>
-            </article>
-        </div>
-        <div style="text-align:center">
-            <button class="see-all-btn" onclick="openAllCasesModal()">See All Case Studies</button>
-        </div>
-    </section>
+   <section id="case-studies">
+    <h2 class="section-title">Real Results for Real Businesses</h2>
+    <div class="case-studies-grid">
+        <article class="case-card">
+            <h4 style="color: var(--primary-green); font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Pet Service Business</h4>
+            <p class="case-preview">Streamlined operations, structured service offerings and pricing model, and established financial foundation for physical expansion.</p>
+            <button class="read-more-btn" onclick="openModal('case1')">Read More</button>
+        </article>
+        <article class="case-card">
+            <h4 style="color: var(--primary-green); font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">AI Healthcare Platform</h4>
+            <p class="case-preview">Built financial infrastructure for rapid scaling, developed operating model, completed accounting cleanup, and established unit economics framework and board reporting cadence.</p>
+            <button class="read-more-btn" onclick="openModal('case2')">Read More</button>
+        </article>
+        <article class="case-card">
+            <h4 style="color: var(--primary-green); font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">$15M DTC Beauty Brand</h4>
+            <p class="case-preview">Drove profitable growth through optimized ad spend allocation, channel expansion strategy, and improved inventory planning.</p>
+            <button class="read-more-btn" onclick="openModal('case3')">Read More</button>
+        </article>
+        <article class="case-card">
+            <h4 style="color: var(--primary-green); font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">$10M High-Growth Retailer</h4>
+            <p class="case-preview">Led turnaround through OpEx reduction, SKU rationalization, cash flow management, accounting cleanup, and multi-retail expansion analysis including lender relations.</p>
+            <button class="read-more-btn" onclick="openModal('case4')">Read More</button>
+        </article>
+    </div>
+    <div style="text-align:center">
+        <button class="see-all-btn" onclick="openAllCasesModal()">See All Case Studies</button>
+    </div>
+</section>
 
     <div id="caseModal" class="modal">
         <div class="modal-content">
@@ -891,53 +895,97 @@
     </div>
 
     <div id="allCasesModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeAllCasesModal()">×</button>
-            <h2 class="section-title" style="margin-bottom:2rem">All Case Studies</h2>
-            <div class="case-studies-grid">
-                <article class="case-card">
-                    <p class="case-preview">Operating partner to a dog training business, streamlining operations, structuring offerings and pricing, and building the foundation for expansion.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case1')">Read More</button>
-                </article>
-                <article class="case-card">
-                    <p class="case-preview">AI healthcare platform: Designed board reporting, operating model, unit economics, and scalable financial infrastructure.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case2')">Read More</button>
-                </article>
-                <article class="case-card">
-                    <p class="case-preview">$15M DTC beauty brand: Drove profitable growth through smarter ad spend, channel expansion, and improved inventory planning.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case3')">Read More</button>
-                </article>
-                <article class="case-card">
-                    <p class="case-preview">$10M high-growth retailer: Led restructuring and turnaround through SKU rationalization, pricing strategy, and retail expansion.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case4')">Read More</button>
-                </article>
-                <article class="case-card">
-                    <p class="case-preview">$100M DTC jeweler: Accounting cleanup, P&L structuring, channel profitability analysis, and retail expansion strategies.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case5')">Read More</button>
-                </article>
-                <article class="case-card">
-                    <p class="case-preview">$5M omnichannel food brand: Accounting cleanup, profitability analysis, wholesale expansion, and improved inventory planning.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case6')">Read More</button>
-                </article>
-                <article class="case-card">
-                    <p class="case-preview">$15M DTC consumer-tech start-up: Balanced growth plans with lender covenants by managing cash flow and optimizing spend.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case7')">Read More</button>
-                </article>
-                <article class="case-card">
-                    <p class="case-preview">Venture studio: Established portfolio reporting and consolidation, standardized metrics, and improved board reporting.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case8')">Read More</button>
-                </article>
-                <article class="case-card">
-                    <p class="case-preview">$150M omnichannel beauty brand: Partnered with CFO on financial planning and supported acquisition from readiness to deal signing.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case9')">Read More</button>
-                </article>
-                <article class="case-card">
-                    <p class="case-preview">Incubations: CFO for venture studio, assessing business model feasibility, pricing, profitability, and steering post-launch growth.</p>
-                    <button class="read-more-btn" onclick="closeAllCasesModal();openModal('case10')">Read More</button>
-                </article>
-            </div>
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeAllCasesModal()">×</button>
+        <h2 class="section-title" style="margin-bottom:2rem">All Case Studies</h2>
+        
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 2rem;">
+                <thead>
+                    <tr style="background: var(--primary-green); color: white;">
+                        <th style="padding: 1rem; text-align: left; font-weight: 600;">Company / Industry</th>
+                        <th style="padding: 1rem; text-align: left; font-weight: 600;">Focus Area</th>
+                        <th style="padding: 1rem; text-align: left; font-weight: 600;">Stakeholder</th>
+                        <th style="padding: 1rem; text-align: left; font-weight: 600;">Key Impact / Deliverables</th>
+                        <th style="padding: 1rem; text-align: left; font-weight: 600;">Funding</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e0e0e0;">
+                        <td style="padding: 1rem;">Pet Service Business</td>
+                        <td style="padding: 1rem;">Operations, Pricing, Financial Infrastructure</td>
+                        <td style="padding: 1rem;">Founder</td>
+                        <td style="padding: 1rem;">Streamlined operations, structured service offerings and pricing model, established financial foundation for physical expansion</td>
+                        <td style="padding: 1rem;">Bootstrapped</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
+                        <td style="padding: 1rem;">AI Healthcare Platform</td>
+                        <td style="padding: 1rem;">Financial Infrastructure, Operating Model</td>
+                        <td style="padding: 1rem;">Founder, SVP of Finance & Ops</td>
+                        <td style="padding: 1rem;">Built financial infrastructure for rapid scaling, developed operating model, completed accounting cleanup, established unit economics framework and board reporting cadence</td>
+                        <td style="padding: 1rem;">Series A</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e0e0e0;">
+                        <td style="padding: 1rem;">$15M DTC Beauty Brand</td>
+                        <td style="padding: 1rem;">Growth Strategy, Performance Marketing, Inventory Management</td>
+                        <td style="padding: 1rem;">Founders</td>
+                        <td style="padding: 1rem;">Drove profitable growth through optimized ad spend allocation, channel expansion strategy, and improved inventory planning</td>
+                        <td style="padding: 1rem;">Bootstrapped</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
+                        <td style="padding: 1rem;">$10M High-Growth Retailer</td>
+                        <td style="padding: 1rem;">Restructuring, Financial Operations</td>
+                        <td style="padding: 1rem;">Founder</td>
+                        <td style="padding: 1rem;">Led turnaround through OpEx reduction, SKU rationalization, cash flow management, accounting cleanup, and multi-retail expansion analysis including lender relations</td>
+                        <td style="padding: 1rem;">Seed</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e0e0e0;">
+                        <td style="padding: 1rem;">$100M DTC Jeweler</td>
+                        <td style="padding: 1rem;">Financial Operations, Strategic Planning</td>
+                        <td style="padding: 1rem;">Founder</td>
+                        <td style="padding: 1rem;">Completed accounting cleanup, restructured P&L, analyzed channel profitability and retail expansion opportunities to inform 5-year strategic plan</td>
+                        <td style="padding: 1rem;">Bootstrapped</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
+                        <td style="padding: 1rem;">$10M Omnichannel Food Brand</td>
+                        <td style="padding: 1rem;">Financial Operations, Channel Strategy, Inventory Management</td>
+                        <td style="padding: 1rem;">Founder, Venture Studio</td>
+                        <td style="padding: 1rem;">Completed accounting cleanup, analyzed channel and product profitability, supported wholesale expansion and improved inventory planning while optimizing contribution margin</td>
+                        <td style="padding: 1rem;">Series A</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e0e0e0;">
+                        <td style="padding: 1rem;">$15M DTC Consumer-Tech</td>
+                        <td style="padding: 1rem;">Cash Management, Lender Relations</td>
+                        <td style="padding: 1rem;">Founder</td>
+                        <td style="padding: 1rem;">Balanced growth objectives with lender covenants through cash flow management and spend optimization, managed lender communication and narrative</td>
+                        <td style="padding: 1rem;">Seed+</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
+                        <td style="padding: 1rem;">$150M Beauty Brand</td>
+                        <td style="padding: 1rem;">Financial Planning, M&A Support</td>
+                        <td style="padding: 1rem;">Founder, CFO</td>
+                        <td style="padding: 1rem;">Partnered with CFO on financial planning and supported acquisition process from readiness through deal signing</td>
+                        <td style="padding: 1rem;">Series A</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e0e0e0;">
+                        <td style="padding: 1rem;">Venture Studio Portfolio</td>
+                        <td style="padding: 1rem;">Portfolio Management, Financial Reporting</td>
+                        <td style="padding: 1rem;">Partners</td>
+                        <td style="padding: 1rem;">Designed and led portfolio reporting and consolidation system, standardized metrics and enhanced board reporting across 4 portfolio companies</td>
+                        <td style="padding: 1rem;">N/A</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 1rem;">Incubations</td>
+                        <td style="padding: 1rem;">Business Model Validation, Financial Strategy</td>
+                        <td style="padding: 1rem;">Venture Studio</td>
+                        <td style="padding: 1rem;">Served as Incubation CFO for Venture Studio, assessed business model feasibility, advised on pricing and profitability, guided post-launch growth strategy</td>
+                        <td style="padding: 1rem;">Pre-Seed</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
     <section id="contact">
         <h2 class="section-title">Let's Work Together</h2>
@@ -1154,6 +1202,7 @@
     </script>
 </body>
 </html>
+
 
 
 
